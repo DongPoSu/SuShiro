@@ -1,3 +1,3 @@
 # SuShiro
-learn shiro and test shiro
-the codo copy from that the name of let's learn shiro who the author is zhangkaitao; 
+学习shiro测试shiro
+代码大部分来自张开涛shiro教程，部分为自己写的
