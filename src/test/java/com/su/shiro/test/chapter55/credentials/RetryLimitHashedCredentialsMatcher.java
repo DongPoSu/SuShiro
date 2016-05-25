@@ -1,4 +1,4 @@
-package com.su.shiro.test.chapter5.credentials;
+package com.su.shiro.test.chapter55.credentials;
 
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Ehcache;
@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @Author: suzheng
  * @Version:
- * @Package: com.su.shiro.test.chapter5.credentials
+ * @Package: com.su.shiro.test.chapter55.credentials
  * @Company: SIBU_KANGER
  * @Description:
  * @Date: 2016/05/25

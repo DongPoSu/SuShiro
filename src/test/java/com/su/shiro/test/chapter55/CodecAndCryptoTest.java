@@ -1,4 +1,4 @@
-package com.su.shiro.test.chapter5;
+package com.su.shiro.test.chapter55;
 
 import org.apache.shiro.codec.Base64;
 import org.apache.shiro.codec.CodecSupport;
