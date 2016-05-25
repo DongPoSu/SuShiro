@@ -1,5 +1,6 @@
 package com.su.shiro.test.chapter3;
 
+import com.su.shiro.test.BaseTest;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +15,7 @@ import java.util.Arrays;
  * @Description:
  * @Date: 2016/05/23
  */
-public class RoleTest extends BaseTest{
+public class RoleTest extends BaseTest {
 
     @Test
     public void testHasRole() {

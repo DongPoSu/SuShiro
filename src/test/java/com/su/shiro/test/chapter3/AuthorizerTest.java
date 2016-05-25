@@ -1,5 +1,6 @@
 package com.su.shiro.test.chapter3;
 
+import com.su.shiro.test.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ import org.junit.Test;
  * @Description:
  * @Date: 2016/05/24
  */
-public class AuthorizerTest extends BaseTest{
+public class AuthorizerTest extends BaseTest {
 
     @Test
     public void testIsPermitted() {
