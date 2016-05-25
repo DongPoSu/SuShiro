@@ -7,6 +7,13 @@
   <version>1.0-SNAPSHOT</version>
     <modules>
         <module>SuShiro-Chapter2</module>
+        <module>Chapter2</module>
+        <module>chapter3</module>
+        <module>chapter2</module>
+        <module>chapter4</module>
+        <module>chapter5</module>
+        <module>chapter6</module>
+        <module>common</module>
     </modules>
     <name>su-shiro Maven Webapp</name>
   <url>http://maven.apache.org</url>
