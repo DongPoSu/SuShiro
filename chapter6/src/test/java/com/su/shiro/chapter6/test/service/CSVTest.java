@@ -37,21 +37,28 @@ public class CSVTest {
     @Test
     public void beanToCsv() {
 //        String[] strHeads = {"序号", "推送号", "订单号", "快递公司", "当前快递单号", "原始快递单号", "推送时间", "发货时间", "收件人", "收件人地址", "产品名称", "产品数量", "买家备注", "卖家备注"};
-        String[] strs = {"name", "password"};
+        String[] strs = {"password", "name","orderCode"};
         File file = new File("beantocsv.csv");
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         List<User> list = new ArrayList<User>();
         for (int i = 0; i < 100; i++) {
-            list.add(new User("su", "123"));
+            list.add(new User("su", "0asdjflajsdlfja","03513156161"));
         }
-        HeaderColumnNameMappingStrategy<User> mappingStrategy = new HeaderColumnNameMappingStrategy<User>();
+        ColumnPositionMappingStrategy<User> mappingStrategy = new ColumnPositionMappingStrategy<User>();
         mappingStrategy.setType(User.class);
+        mappingStrategy.setColumnMapping(strs);
         try {
             Writer writer = new FileWriter(file);
             CSVWriter csvWriter = new CSVWriter(writer);
-            BeanToCsv beanToCsv = new BeanToCsv();
+            MyBeanToCsv beanToCsv = new MyBeanToCsv();
             beanToCsv.write(mappingStrategy, csvWriter, list);
             csvWriter.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -61,13 +68,12 @@ public class CSVTest {
     public void beanToCsv2() throws Exception{
         List<User> list = new ArrayList<User>();
         for (int i = 0; i < 10; i++) {
-            list.add(new User("su", null));
+            list.add(new User("su", null, null));
         }
         List<String[]> strs = new ArrayList<String[]>();
         for (User user : list) {
             strs.add(user.convertToStrings());
         }
-        list = null;
         File file = new File("test.csv");
         Writer writer = new FileWriter(file);
         CSVWriter csvWriter = new CSVWriter(writer, ',');

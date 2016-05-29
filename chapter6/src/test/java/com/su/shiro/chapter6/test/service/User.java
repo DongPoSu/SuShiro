@@ -11,12 +11,24 @@ package com.su.shiro.chapter6.test.service;
 public class User {
     private String name;
     private String password;
+    private String orderCode;
+
 
     public User() {
     }
-    public User(String name, String password) {
+
+    public String getOrderCode() {
+        return orderCode;
+    }
+
+    public void setOrderCode(String orderCode) {
+        this.orderCode = orderCode;
+    }
+
+    public User(String name, String password, String orderCode) {
         this.name = name;
         this.password = password;
+        this.orderCode = orderCode;
     }
 
     public String getName() {
