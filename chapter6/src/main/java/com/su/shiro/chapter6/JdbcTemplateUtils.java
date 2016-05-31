@@ -24,7 +24,8 @@ public class JdbcTemplateUtils {
     private static JdbcTemplate createJdbcTemplate() {
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName("com.mysql.jdbc.driver");
-        druidDataSource.setUrl("jdbc:mysql://120.76.43.202:3306/test");
+//        druidDataSource.setUrl("jdbc:mysql://120.76.43.202:3306/test");
+        druidDataSource.setUrl("jdbc:mysql://127.0.0.1:3306/test");
         druidDataSource.setUsername("root");
         druidDataSource.setPassword("Aa12346");
         return new JdbcTemplate(druidDataSource);

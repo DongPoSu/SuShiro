@@ -1,5 +1,6 @@
 package com.su.shiro.chapter6.test.service;
 
+import com.su.shiro.chapter6.test.BaseTest;
 import org.junit.Test;
 
 /**
@@ -10,7 +11,7 @@ import org.junit.Test;
  * @Description:
  * @Date: 2016/05/26
  */
-public class ServiceTest {
+public class ServiceTest extends BaseTest {
     @Test
     public void testUserRolePermissionRelation() {
 
