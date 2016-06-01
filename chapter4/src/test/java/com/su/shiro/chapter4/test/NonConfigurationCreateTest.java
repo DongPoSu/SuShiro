@@ -42,7 +42,8 @@ public class NonConfigurationCreateTest {
         // 设置realm
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        druidDataSource.setUrl("jdbc:mysql://120.76.43.202:3306/test");
+//        druidDataSource.setUrl("jdbc:mysql://120.76.43.202:3306/test");
+        druidDataSource.setUrl("jdbc:mysql://127.0.0.1:3306/test");
         druidDataSource.setUsername("root");
         druidDataSource.setPassword("Aa123456");
 

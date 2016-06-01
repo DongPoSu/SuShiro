@@ -10,6 +10,7 @@ import org.springframework.jdbc.datasource.SingleConnectionDataSource;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * @Author: suzheng
@@ -45,10 +46,19 @@ public class JdbcTemplateUtils {
 //        dataSource.setPassword("Aa12346");
 //        dataSource.setConnectionErrorRetryAttempts(2);
 //        dataSource.setInitialSize(1);
-        Map propertyMap = new HashMap();
+        Map<String,Object> map = new HashMap<String, Object>();
+        map.put(DruidDataSourceFactory.PROP_DRIVERCLASSNAME,"com.mysql.jdbc.Driver");
+        map.put(DruidDataSourceFactory.PROP_URL,"jdbc:mysql://127.0.0.1:3306/test");
+        map.put(DruidDataSourceFactory.PROP_PASSWORD,"Aa123456");
+        map.put(DruidDataSourceFactory.PROP_USERNAME, "root");
+        map.put(DruidDataSourceFactory.PROP_MAXIDLE, "5");
+        map.put(DruidDataSourceFactory.PROP_MINIDLE, "1");
+        map.put(DruidDataSourceFactory.PROP_INITIALSIZE, "1");
+        map.put(DruidDataSourceFactory.PROP_INIT, "true");
+
         DruidDataSource dataSource = null;
         try {
-            dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(propertyMap);
+            dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(map);
         } catch (Exception e) {
             e.printStackTrace();
         }
