@@ -53,8 +53,6 @@ public class RolePermission implements Serializable {
         if (roleId != null ? !roleId.equals(that.roleId) : that.roleId != null) {
             return false;
         }
-
-
         return true;
     }
 
