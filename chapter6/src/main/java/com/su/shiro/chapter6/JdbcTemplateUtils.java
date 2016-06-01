@@ -45,8 +45,13 @@ public class JdbcTemplateUtils {
 //        dataSource.setPassword("Aa12346");
 //        dataSource.setConnectionErrorRetryAttempts(2);
 //        dataSource.setInitialSize(1);
-        Map propertyMap = new HashMap()
-        DruidDataSource dataSource = DruidDataSourceFactory.createDataSource();
+        Map propertyMap = new HashMap();
+        DruidDataSource dataSource = null;
+        try {
+            dataSource = (DruidDataSource) DruidDataSourceFactory.createDataSource(propertyMap);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return new JdbcTemplate(dataSource);
     }
 }
